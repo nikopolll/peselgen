@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Pesel generator</title>
+  <script src="pesel.js" charset="utf-8" defer></script>
+  <style media="screen">
+    body {
+      background-color: #0069ac;
+      color: #fff;
+      font-size: 1.5em;
+    }
+
+    section {
+      display: grid;
+      grid-template-columns: 400px auto 400px;
+      grid-template-rows: 100px 100px 100px 100px 100px;
+    }
+
+    input {
+      grid-column-start: 2;
+      grid-column-end: 2;
+      grid-row-start: 2;
+      font-size: 2em;
+    }
+
+    #p-data{
+      grid-column-start: 2;
+      grid-column-end: 2;
+      grid-row-start: 3;
+      text-align: center;
+      font-size: 1.2em;
+      padding: 20px;
+    }
+    .label {
+      padding: 20px;
+      grid-column-start: 2;
+      grid-column-end: 2;
+      grid-row-start: 4;
+      text-align: center;
+      font-size: 1.1em;
+    }
+    .data_print {
+      padding: 100px;
+      grid-column-start: 2;
+      grid-column-end: 2;
+      grid-row-start: 5;
+      text-align: center;
+      font-size: 1.7em;
+    }
+  </style>
+</head>
+
+<body>
+  <section>
+    <form action="" id="p-data">
+      <input type="date" id="data" name="data">
+      <select id="sexSelect">
+        <optgroup label="Płeć">
+          <option value="K">Kobieta</option>
+          <option value="M">Męzczyzna</option>
+        </optgroup>
+      </select>
+      <button id="button" type="button">Wyślij</button>
+    </form>
+    <div class="label">Twój nowy PESEL: </div>
+    <div id="data_print" class="data_print"> </div>
+  </section>
+
+</body>
+
+</html>
